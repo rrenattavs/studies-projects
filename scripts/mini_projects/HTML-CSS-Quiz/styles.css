@@ -1,0 +1,6 @@
+img{
+    min-width: 250px;
+  }
+  #logo{
+    width: max(100px, 18vw);
+  }
