@@ -3,8 +3,9 @@ Operations & Comparisons
 Step 1
 Create two variables called "num1" and "num2". Assign each variable a different numerical value between 1 and 15.
 */
-let num1 = 1;
-let num2 = 2;
+let num1 = Math.floor(Math.random() * 16);
+let num2 = Math.floor(Math.random() * 16);
+console.log(num1, num2);
 
 /*
 Step 2
