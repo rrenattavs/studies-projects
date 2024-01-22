@@ -1,0 +1,96 @@
+Function A
+
+function isPrime(number n)
+    for i from 2 to square root of n rounded down inclusive
+        if n mod i = 0
+            return false
+    return true
+
+
+Function B
+
+function isPrime(number n)
+    factors = generated array of numbers from 2 to n-1 inclusive
+    for i in factors:
+        if n mod i = 0 is not equal to 0
+            remove i from factors
+    if factors is not empty
+        return false
+    return true
+
+Function C
+
+function isPrime(number n)
+    for i from 1 to n inclusive:
+        if i is not equal to 1 and i is not equal to n and mod is equal 0
+            return false
+    return true
+
+
+
+Response A
+
+def create_staircase(nums):
+    while len(nums) != 0:
+        step = 1
+        subsets = []
+        if len(nums) >= step:
+            subsets.append(nums[0:step])
+            nums = nums[step:]
+            step+=1
+        else:
+            return False
+    return subsets
+
+
+Response B
+
+def create_staircase(nums):
+    step = 1
+    subsets = []
+    while len(nums) != 0:
+        if len(nums) >= step:
+            subsets.append(nums[0:step])
+            nums = nums[step:]
+            step+=1
+        else:
+            return False
+    return subsets
+
+Input: [1,2,3,4,5,6]
+Output:[[1],[2,3],[4,5,6]]
+
+Input: [1,2,3,4,5,6,7]
+Output: False
+
+In the example [1,2,3,4,5,6,7] the list of lists only has one elemennt in its fourth list:
+[[1],[2,3],[4,5,6],[7]]
+
+That is not equal to the length of the previous list plus one. The last list would have to have four elements to be a valid staircase 
+
+
+
+In this exercise you will develop a function named `decode(message_file)`
+This function should read an encoded message from the a .txt file and return its decoded version as a String
+Note that you can write your code using any language and IDE you want(python is preferred if possible, but not mandatory)
+
+Your function must be able to process an input file with the following format:
+
+3 love 
+6 computers
+2 dogs
+4 cats
+1 I
+5 you
+
+in this file, each line contains a number followed by a word. The task is to decode a hidden message based on the arrangement of these numbers into a "pyramid" structure. The pyramid increases by one number per line, like so:
+
+  1
+ 2 3
+4 5 6
+
+The key to decoding the message is to use words corresponding to the numbers at the end of each pyramid line(in this example, 1, 3 and 6). You should ignore all the other words. So for example input file above, the message words are:
+1: I
+3: love
+6: computers
+and your function should return the string "I love computers"
