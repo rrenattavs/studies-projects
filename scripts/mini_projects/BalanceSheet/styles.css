@@ -149,3 +149,7 @@ span[class~="sr-only"] {
     text-align: right;
   
   }
+
+  tr.data td:last-of-type{
+    padding: 0.5rem;
+  }
